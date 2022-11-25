@@ -7,6 +7,9 @@
     color: #F3EAC0;
 }
 
+.bg-brown {
+    background-color: #603B3B;
+}
 
 /* ----------------------------------------- Header */
 .navbar-nav .nav-link:hover {
@@ -34,4 +37,17 @@
   
 .navbar-toggler {
     border-color: rgb(243,234,192);
-  } 
+  }
+
+/* ---------------------------------------------- Footer */
+footer, footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #F3EAC0;
+}
+
+footer i {
+    font-size: 30px;
+}
