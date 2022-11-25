@@ -1,0 +1,28 @@
+/* ------------------------------------- Colors */
+.bg-burgunday {
+    background-color: #922C40;
+}
+
+.text-creamy {
+    color: #F3EAC0;
+}
+
+
+/* ----------------------------------------- Header */
+.navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: #F3EAC0;
+}
+
+.reservation-btn {
+    border: 1px solid  #F3EAC0;
+    color: #F3EAC0;
+}
+
+.reservation-btn:hover {
+    background-color: #F3EAC0;
+    color: black;
+}
