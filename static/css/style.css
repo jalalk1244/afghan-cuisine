@@ -47,19 +47,6 @@
     border-color: rgb(243,234,192);
   }
 
-/* ---------------------------------------------- Footer */
-footer, footer a {
-    color: white;
-}
-
-footer a:hover {
-    color: #F3EAC0;
-}
-
-footer i {
-    font-size: 30px;
-}
-
 /* ---------------------------------------------- Hero image */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url("/static/media/images/hero-image-afghancuisine.jpg") no-repeat fixed bottom / cover;
@@ -83,3 +70,33 @@ footer i {
     font-size: 26px;
     font-weight: normal;
   }
+
+/* ---------------------------------------------- About Us */
+  .about-us-hr {
+    width: 50%;
+    border-top: 3px double #603B3B;
+  }
+
+  .about-us-paragraph {
+    max-width: 800px;
+  }
+
+  /* ---------------------------------------------- Delivery  */
+  .dilevery-info img {
+    max-width: 100px;
+    display: block;
+    margin: auto;
+  }
+  
+  /* ---------------------------------------------- Footer */
+footer, footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #F3EAC0;
+}
+
+footer i {
+    font-size: 30px;
+}
