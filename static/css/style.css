@@ -81,13 +81,17 @@
     max-width: 800px;
   }
 
-  /* ---------------------------------------------- Delivery  */
+  /* ---------------------------------------------- Delivery and opening hours */
   .dilevery-info img {
     max-width: 100px;
     display: block;
     margin: auto;
   }
-  
+
+  .blockquote-footer::before {
+    content: "";
+  }
+
   /* ---------------------------------------------- Footer */
 footer, footer a {
     color: white;
