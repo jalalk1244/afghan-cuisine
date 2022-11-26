@@ -7,8 +7,16 @@
     color: #F3EAC0;
 }
 
+.bg-creamy {
+    background-color: #F3EAC0;
+}
+
 .bg-brown {
     background-color: #603B3B;
+}
+
+.text-brown {
+    color: #603B3B;
 }
 
 /* ----------------------------------------- Header */
