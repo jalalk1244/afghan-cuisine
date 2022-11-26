@@ -71,6 +71,15 @@
     font-weight: normal;
   }
 
+  .hero-down-arrow {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .hero-down-arrow:hover {
+    color: white;
+  }
+
 /* ---------------------------------------------- About Us */
   .about-us-hr {
     width: 50%;
