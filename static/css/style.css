@@ -51,3 +51,27 @@ footer a:hover {
 footer i {
     font-size: 30px;
 }
+
+/* ---------------------------------------------- Hero image */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url("/static/media/images/hero-image-afghancuisine.jpg") no-repeat fixed bottom / cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero h1 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 1;
+    margin: 15px 0;
+  }
+
+  .hero h3 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: normal;
+  }
