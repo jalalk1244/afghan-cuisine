@@ -13,7 +13,7 @@ def index(request):
         # When the contact form is submitted
         name = f"{request.POST['first_name']} {request.POST['last_name']}"
         from_email = request.POST['email']
-        subject = f'You have got an email from {name}'
+        subject = f'You have got an email from {from_email}'
         message = request.POST['message']
         recipient_list = [settings.EMAIL_HOST_USER]
 
