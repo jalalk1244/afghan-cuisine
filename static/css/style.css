@@ -105,13 +105,16 @@
     content: "";
   }
 
-  /* ---------------------------------------------- Contact page */
-  .contact-us {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* ---------------------------------------------- Contact page */
+.contact-form-column {
+  border-top: 3px solid #922C40;
+  border-left: 3px solid #922C40;
+}
+
+.contact-form-image {
+  height: 100%;
+  width: 100%;
+}
 
   /* ---------------------------------------------- Footer */
 footer, footer a {
