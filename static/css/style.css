@@ -105,7 +105,11 @@
     content: "";
   }
 
-/* ---------------------------------------------- Contact page */
+/* ---------------------------------------------- Contact Us */
+.contact-us {
+  padding-top: 4rem;
+}
+
 .contact-form-column {
   border-top: 3px solid #922C40;
   border-left: 3px solid #922C40;
