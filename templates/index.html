@@ -46,3 +46,21 @@
     </div>
 </section>
 {% endblock content %}
+
+{% block js %}
+
+<!-- Toggle navabar background on scroll -->
+    <script>
+        $(document).ready(function() {
+            $('nav').removeClass('bg-burgunday');
+            $(window).bind('scroll', function() {
+                var gap = 50;
+                if($(window).scrollTop() > gap) {
+                    $('nav').addClass('scrolling');
+                } else {
+                    $('nav').removeClass('scrolling');
+                }
+            })
+        })
+    </script>
+{% endblock js %}

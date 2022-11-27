@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top bg-burgunday">
         <a class="navbar-brand text-creamy" href="#">Afghan Cuisine</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -104,20 +104,10 @@
             </div>
         </div>
     </footer>
-      
-    <!-- Toggle navabar background on scroll -->
-    <script>
-        $(document).ready(function() {
-            $(window).bind('scroll', function() {
-                var gap = 50;
-                if($(window).scrollTop() > gap) {
-                    $('nav').addClass('scrolling');
-                } else {
-                    $('nav').removeClass('scrolling');
-                }
-            })
-        })
-    </script>
+    
+    {% block js %}
+    <!-- Javascript goes here -->
+    {% endblock js %}
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/6d150c6f4b.js" crossorigin="anonymous"></script>
     <!-- Bootstrap Javascript -->
