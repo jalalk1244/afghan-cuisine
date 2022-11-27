@@ -108,6 +108,8 @@
 /* ---------------------------------------------- Contact Us */
 .contact-us {
   padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-top: 1px solid white;
 }
 
 .contact-form-column {
@@ -118,6 +120,29 @@
 .contact-form-image {
   height: 100%;
   width: 100%;
+}
+
+/* ---------------------------------------------- Adress */
+.adress {
+  border-top: 1px solid white;
+}
+
+.map-column {
+  border-left: 1px solid white;
+}
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:50%;
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }
 
   /* ---------------------------------------------- Footer */
