@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'crispy_forms',
     'coresite',
+    'allauth.socialaccount.providers.google',
 ]
 
 SITE_ID = 1
@@ -57,6 +58,13 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_REQUIRED = True
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SOCIALACCOUNT_LOGIN_ON_GET = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
