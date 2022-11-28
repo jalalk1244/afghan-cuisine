@@ -3,7 +3,6 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import ContactForm
 from afghancuisine import settings
-
 # Create your views here.
 
 

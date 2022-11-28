@@ -145,6 +145,19 @@
   position:absolute;
 }
 
+/* ---------------------------------------------- Authentication */
+.sing-in {
+  height: 90vh;
+}
+
+.btn-signup {
+  border: 1px solid #922C40
+}
+
+.btn-signup:hover {
+  color: #F3EAC0;
+  background-color: #922C40;
+}
   /* ---------------------------------------------- Footer */
 footer, footer a {
     color: white;
