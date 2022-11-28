@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'coresite',
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
 ]
 
 SITE_ID = 1
