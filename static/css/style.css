@@ -169,7 +169,7 @@
   border-color: white;
 }
 
-/* ---------------------------------------------- reservations */
+/* ---------------------------------------------- viewing reservations */
 .reservations {
   height: 90vh;
   display: flex;
@@ -178,6 +178,16 @@
 
 .reservations ul {
   list-style: none;
+}
+
+/* ---------------------------------------------- create reservations */
+.create-reservation {
+  height: 90vh;
+}
+
+.create-reservation a {
+  color: #922C40;
+  text-decoration: underline;
 }
 
 /* ---------------------------------------------- Footer */
