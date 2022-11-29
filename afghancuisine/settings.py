@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'coresite',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
+    'reservation',
 ]
 
 SITE_ID = 1
