@@ -13,7 +13,7 @@ class ReservationList(View):
 
         return render(
             request, 
-            'reservations.html',
+            'view_reservations.html',
             {
                 'reservations_list': reservations_list
             },

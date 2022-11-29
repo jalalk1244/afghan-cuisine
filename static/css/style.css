@@ -176,8 +176,12 @@
   align-items: center;
 }
 
-.reservations ul {
-  list-style: none;
+.text-red {
+  color: red;
+}
+
+.text-green {
+  color: green;
 }
 
 /* ---------------------------------------------- create reservations */
