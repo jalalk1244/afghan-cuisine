@@ -37,6 +37,11 @@
             <li class="nav-item">
                 <a class="nav-link text-creamy" href="{% url 'index' %}#contact-section">Contact</a>
             </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link text-creamy" href="{% url 'reservations' %}">My Reservations</a>
+                </li>
+            {% endif %}
             
           </ul>
           <ul class="navbar-nav my-2 my-lg-0">
