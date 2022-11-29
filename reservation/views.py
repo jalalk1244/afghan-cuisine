@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
@@ -37,3 +37,32 @@ def create_reservation(request):
             submitted = True
 
     return render(request, 'create_reservation.html', {'form': reservation_form, 'submitted':submitted})
+
+
+def edit_reservation(request, reservation_id):
+    query_set = Reservation.objects.filter(id=reservation_id)
+    reservation = get_object_or_404(query_set, id=reservation_id)
+
+    if request.method == 'POST':
+        reservation_form = ReservationForm(request.POST)
+        if reservation_form.is_valid():
+            reservation.title = request.POST['title']
+            reservation.num_of_guest = request.POST['num_of_guest']
+            reservation.date_picked = request.POST['date_picked']
+            reservation.time_picked = request.POST['time_picked']
+            reservation.save()
+            return HttpResponseRedirect('/reservations')
+    else:
+        reservation_data = {
+        'title': reservation.title,
+        'client': reservation.client,
+        'num_of_guest': reservation.num_of_guest,
+        'date_picked': reservation.date_picked,
+        'time_picked': reservation.time_picked,
+        'approved': reservation.approved,
+        }
+        reservation_form = ReservationForm(initial=reservation_data)
+        if 'submitted' in request.GET:
+            submitted = True
+
+    return render(request, 'edit_reservation.html', {'form': reservation_form})

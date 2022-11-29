@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<center class="create-reservation d-flex flex-column justify-content-center align-items-center bg-creamy">
+    {% if user.is_authenticated %}
+        {% if submitted %}
+            <h1 class="text-brown">Your reservation has been updated</h1>
+        {% else %}
+            <h1 class="text-brown">Update your reservation</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <input type="submit" value="submit" class="btn btn-signup">
+            </form>
+        {% endif %}
+    {% else %}
+    <h1 class="text-brown"><a href="{% url 'account_login' %}">Login</a> to update your reservations</h1>
+    {% endif %}
+    <!-- <h1>edit reservations here {{ reservation_id }}</h1> -->
+</center>
+
+{% endblock content %}

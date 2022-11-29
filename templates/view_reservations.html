@@ -31,6 +31,7 @@
                                     <td>{% if reservation.approved %}<i
                                             class="text-green fa-regular fa-circle-check"></i>{% else %}<i
                                             class="text-red fa-solid fa-x"></i>{% endif %}</td>
+                                    <td><a class="btn btn-signup" href="{% url 'edit_reservation' reservation.id %}">Edit</a></td>
                                 </tr>
                             {% endfor %}
                             </tbody>
