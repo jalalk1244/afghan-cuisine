@@ -195,6 +195,21 @@
   text-decoration: underline;
 }
 
+/* ---------------------------------------------- edit reservations */
+.btn a {
+  text-decoration: none !important;
+}
+
+.btn-danger {
+  margin: 10px;
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.show {
+  display: block !important;
+}
+
 /* ---------------------------------------------- Footer */
 footer, footer a {
     color: white;

@@ -33,7 +33,6 @@
                                             class="text-red fa-solid fa-x"></i>{% endif %}</td>
                                     <td>
                                         <a class="btn btn-signup" href="{% url 'edit_reservation' reservation.id %}">Edit</a>
-                                        <a href="{% url 'delete_reservation' reservation_id=reservation.id %}" class="btn btn-warning">Delete</a>
                                     </td>
                                 </tr>
                             {% endfor %}

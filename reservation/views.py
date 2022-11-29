@@ -62,14 +62,23 @@ def edit_reservation(request, reservation_id):
             'approved': reservation.approved,
         }
         reservation_form = ReservationForm(initial=reservation_data)
-        if 'submitted' in request.GET:
-            submitted = True
 
     return render(request, 'edit_reservation.html', {'form': reservation_form, 'reservation_id': reservation_id})
 
 
+# def delete_reservation(request, reservation_id):
+
+#     if request.method == 'POST':
+#         query_set = Reservation.objects.filter(id=reservation_id)
+#         reservation = get_object_or_404(query_set, id=reservation_id)
+#         reservation.delete()
+#         return HttpResponseRedirect('/reservations')
+    
+#     return render(request, 'confirm_delete.html', {'reservation_id': reservation_id})
 def delete_reservation(request, reservation_id):
+
     query_set = Reservation.objects.filter(id=reservation_id)
     reservation = get_object_or_404(query_set, id=reservation_id)
     reservation.delete()
     return HttpResponseRedirect('/reservations')
+    
