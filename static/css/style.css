@@ -169,6 +169,17 @@
   border-color: white;
 }
 
+/* ---------------------------------------------- reservations */
+.reservations {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.reservations ul {
+  list-style: none;
+}
+
 /* ---------------------------------------------- Footer */
 footer, footer a {
     color: white;
