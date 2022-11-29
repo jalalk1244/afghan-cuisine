@@ -170,7 +170,7 @@
 }
 
 /* ---------------------------------------------- viewing reservations */
-.reservations {
+.view_reservations {
   height: 90vh;
   display: flex;
   align-items: center;
@@ -189,7 +189,8 @@
   height: 90vh;
 }
 
-.create-reservation a {
+.create-reservation a,
+.view_reservations a {
   color: #922C40;
   text-decoration: underline;
 }

@@ -2,37 +2,42 @@
 
 {% block title %}Reservations{% endblock title %}
 {% block content %}
-<section class="reservations bg-creamy">
+<section class="view_reservations bg-creamy">
     <div class="container d-flex flex-coulmn justify-content-center">
         <div class="row">
             <div class="col-12 mt-3 left">
-                <h1 class="text-brown">Reservations</h1>
-                {% if reservations_list %}
-                <table class="table">
-                    
-                    <thead>
-                      <tr>
-                        <th scope="col">Reservation id</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Time</th>
-                        <th scope="col">Number of guests</th>
-                        <th scope="col">Approved</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {% for reservation in reservations_list %}
-                      <tr>
-                        <th scope="row">{{reservation.id}}</th>
-                        <td>{{reservation.title}}</td>
-                        <td>{{reservation.date_picked}}</td>
-                        <td>{{reservation.time_picked}}</td>
-                        <td>{{reservation.num_of_guest}}</td>
-                        <td>{% if reservation.approved %}<i class="text-green fa-regular fa-circle-check"></i>{% else %}<i class="text-red fa-solid fa-x"></i>{% endif %}</td>
-                      </tr>
-                      {% endfor %}
-                    </tbody>
-                  </table>
+                {% if user.is_authenticated %}
+                    <h1 class="text-brown">Reservations</h1>
+                    {% if reservations_list %}
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Reservation id</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Number of guests</th>
+                                <th scope="col">Approved</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for reservation in reservations_list %}
+                                <tr>
+                                    <th scope="row">{{reservation.id}}</th>
+                                    <td>{{reservation.title}}</td>
+                                    <td>{{reservation.date_picked}}</td>
+                                    <td>{{reservation.time_picked}}</td>
+                                    <td>{{reservation.num_of_guest}}</td>
+                                    <td>{% if reservation.approved %}<i
+                                            class="text-green fa-regular fa-circle-check"></i>{% else %}<i
+                                            class="text-red fa-solid fa-x"></i>{% endif %}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    {% endif %}
+                {% else %}
+                    <h1 class="text-brown"><a href="{% url 'account_login' %}">Login</a> to view your reservations</h1>
                 {% endif %}
             </div>
         </div>

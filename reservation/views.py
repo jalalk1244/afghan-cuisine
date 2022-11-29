@@ -9,8 +9,10 @@ from .forms import ReservationForm
 class ReservationList(View):
 
     def get(self, request, *args, **kwargs):
-        reservations_list = Reservation.objects.filter(client=request.user).order_by('-date_picked')
-
+        if request.user.is_authenticated:
+            reservations_list = Reservation.objects.filter(client=request.user).order_by('-date_picked')
+        else:
+            reservations_list = []
         return render(
             request, 
             'view_reservations.html',
