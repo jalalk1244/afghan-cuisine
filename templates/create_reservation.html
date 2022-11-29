@@ -2,10 +2,11 @@
 
 {% block content %}
     <center style="height: 90vh;" class="d-flex flex-column justify-content-center align-items-center bg-creamy">
-        <h1>Create a new Reservation</h1>
         {% if submitted %}
-            Your reservation is awaiting approval now
+            <h1 class="text-brown">Thank you for your reservation</h1>
+            <p class="h3">Your reservation is awaiting approval now</p>
         {% else %}
+            <h1 class="text-brown">Book a reservation</h1>
             <form action="" method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -15,3 +16,5 @@
         {% endif %}
     </center>
 {% endblock content %}
+
+
