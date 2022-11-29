@@ -11,7 +11,7 @@
                     {% for reservation in reservations_list %}
                     <li>
                         <p>
-                            <a class="btn btn-primary" data-toggle="collapse" href="#collapse{{ reservation.title }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <a class="btn btn-signup" data-toggle="collapse" href="#collapse{{ reservation.title }}" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 <strong>{{ reservation.title}}</strong> : {{ reservation.date_picked|date:"Y-m-d" }}
                                 {% if reservation.approved == True %}
                                 <i class="fas fa-exclamation-circle light-blue-text text-lighten-2"></i>
@@ -19,8 +19,8 @@
                             </a>
                         </p>
                         <div class="collapse" id="collapse{{ reservation.title }}">
-                            <div class="card card-body">
-                                {{ reservation.client }} has booked this reservation
+                            <div class="card card-body ">
+                                {{ reservation.client }} has booked this reservation for {{ reservation.date_picked|date:"Y-m-d" }}
                             </div>
                         </div>
                     </li>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <center style="height: 90vh;" class="d-flex flex-column justify-content-center align-items-center bg-creamy">
+        <h1>Create a new Reservation</h1>
+        {% if submitted %}
+            Your reservation is awaiting approval now
+        {% else %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <input type="submit" value="submit" class="btn btn-signup">
+            </form>
+        {% endif %}
+    </center>
+{% endblock content %}
