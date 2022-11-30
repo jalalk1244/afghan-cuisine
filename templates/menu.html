@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block nav-position %}position-relative{% endblock nav-position %}
+
+{% block content %}
+
+<center class="d-flex flex-column justify-content-center align-items-center bg-creamy">
+    <h1 class="text-center text-brown">Menu</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12"><h3 class="text-left">Dishes</h3></div>
+            {% for dish in dishes_list %}
+            <div class="col-12 col-md-4 my-3">
+                <div class="card" style="width: 18rem;">
+                    {% if "placeholder" in dish.dish_pic.url %}
+                    <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    {% else %}
+                    <img class="card-img-top" src=" {{ dish.dish_pic.url }}" alt="image of {{ dish.name }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{dish.name}}</h5>
+                        <div class="collapse" id="collapse-{{ dish.id }}">
+                            <p class="card-text">{{dish.description}}</p>
+                            <hr>
+                            <div style="overflow-x: auto;">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Calories</th>
+                                            <th scope="col">Carbs</th>
+                                            <th scope="col">Protien</th>
+                                            <th scope="col">Fat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ dish.calorie_amount }}</td>
+                                            <td>{{ dish.carbs_amount }}</td>
+                                            <td>{{ dish.protien_amount }}</td>
+                                            <td>{{ dish.fat_amount }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <a class="btn btn-signup" data-toggle="collapse" href="#collapse-{{ dish.id }}" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Read more
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</center>
+
+{% endblock content %}
