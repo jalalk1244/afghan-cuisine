@@ -184,13 +184,29 @@
   color: green;
 }
 
+.list-group-item {
+  background: inherit;
+  padding: 5px 10px;
+  border: 1px solid #922C40;
+  color: #922C40;
+}
+
+.list-group-item:hover{
+  text-decoration: none;
+  background-color: #922C40;
+  color: #F3EAC0;
+}
+
+.collaps-div {
+  border: 1px solid #922C40;
+}
+
 /* ---------------------------------------------- create reservations */
 .create-reservation {
   height: 90vh;
 }
 
-.create-reservation a,
-.view_reservations a {
+.create-reservation a {
   color: #922C40;
   text-decoration: underline;
 }
