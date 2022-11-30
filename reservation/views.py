@@ -46,7 +46,9 @@ def edit_reservation(request, reservation_id):
     if request.method == 'POST':
         reservation_form = ReservationForm(request.POST)
         if reservation_form.is_valid():
-            reservation.title = request.POST['title']
+            reservation.name = request.POST['name']
+            reservation.email = request.POST['email']
+            reservation.phone_num = request.POST['phone_num']
             reservation.num_of_guest = request.POST['num_of_guest']
             reservation.date_picked = request.POST['date_picked']
             reservation.time_picked = request.POST['time_picked']
@@ -54,7 +56,9 @@ def edit_reservation(request, reservation_id):
             return HttpResponseRedirect('/reservations')
     else:
         reservation_data = {
-            'title': reservation.title,
+            'name': reservation.name,
+            'email': reservation.email,
+            'phone_num': reservation.phone_num,
             'client': reservation.client,
             'num_of_guest': reservation.num_of_guest,
             'date_picked': reservation.date_picked,
