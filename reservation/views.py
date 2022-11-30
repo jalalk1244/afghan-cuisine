@@ -32,7 +32,8 @@ def create_reservation(request):
             reservation_form.save()
             return HttpResponseRedirect('/create_reservation?submitted=True')
     else:
-        reservation_form = ReservationForm()
+        user_instace = {'name': request.user.username, 'email':request.user.email}
+        reservation_form = ReservationForm(initial=user_instace)
         if 'submitted' in request.GET:
             submitted = True
 
