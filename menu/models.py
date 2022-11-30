@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 ALLERGY_ICONS = (
     ('0', 'none'),
