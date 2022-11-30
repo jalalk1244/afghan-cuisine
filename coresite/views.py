@@ -18,7 +18,7 @@ def index(request):
             message = request.POST['message']
             recipient_list = [settings.EMAIL_HOST_USER]
 
-            # Send the details in an emaiil
+            # Send the details in an email
             send_mail(subject, message, from_email, recipient_list)
             # Success message
             success_message = f"Thank you {name}. We'll get back to you ass soon as possible!"

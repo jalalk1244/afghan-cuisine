@@ -8,14 +8,16 @@
             <h1 class="text-brown">Your reservation has been updated</h1>
         {% else %}
             <h1 class="text-brown">Update your reservation</h1>
-            <form action="" method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-
-                <input type="submit" value="submit" class="btn btn-signup">
-            </form>
+            <table>
+              <form action="" method="POST" id="edit_reservation_form">
+                  {% csrf_token %}
+                  {{ form.as_table }}
+              </form>
+            </table>
+            <button type="submit" class="btn btn-signup" form="edit_reservation_form">Submit</button>
             <a class="btn btn-danger" onclick="show_modal();">Delete</a>
 
+            <!-- The modal -->
             <div class="modal" tabindex="-1" id="modal">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
@@ -23,11 +25,11 @@
                       <h5 class="modal-title">Are you sure you want to delete this reservation</h5>
                     </div>
                     <div class="modal-body">
-                      <p>This action can not be undon!</p>
+                      <p>This action <strong>CAN NOT</strong> be undon!</p>
                     </div>
                     <div class="modal-footer">
                       <a href="{% url 'delete_reservation' reservation_id %}" class="btn btn-danger">Delete</a>
-                      <a class="btn btn-warning" onclick="show_modal();">No</a>
+                      <a class="btn reservation-btn" onclick="show_modal();">No</a>
                     </div>
                   </div>
                 </div>

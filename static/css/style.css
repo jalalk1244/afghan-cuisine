@@ -226,6 +226,15 @@
   display: block !important;
 }
 
+.modal {
+  display: none;
+}
+
+.modal-content {
+  background-color: #922C40;
+  color: #F3EAC0;
+}
+
 /* ---------------------------------------------- Footer */
 footer, footer a {
     color: white;

@@ -1,7 +1,5 @@
 from django import forms
 
-from allauth.account.forms import LoginForm
-
 
 class ContactForm(forms.Form):
     '''The contact form in the index.html file'''

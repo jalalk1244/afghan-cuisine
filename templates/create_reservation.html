@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load crispy_forms_tags %}
     <center class="create-reservation d-flex flex-column justify-content-center align-items-center bg-creamy">
         {% if user.is_authenticated %}
             {% if submitted %}
@@ -8,12 +9,13 @@
                 <p class="h3">Your reservation is awaiting approval now</p>
             {% else %}
                 <h1 class="text-brown">Book a reservation</h1>
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-
-                    <input type="submit" value="submit" class="btn btn-signup">
-                </form>
+                <table>
+                    <form action="" method="POST" id="create_reservation_form">
+                        {% csrf_token %}
+                        {{ form.as_table }}
+                    </form>
+                </table>
+                <button type="submit" class="btn btn-signup" form="create_reservation_form">Submit</button>
             {% endif %}
         {% else %}
         <h1 class="text-brown"><a href="{% url 'account_login' %}">Login</a> to make a reservation</h1>
