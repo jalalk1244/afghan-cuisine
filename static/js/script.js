@@ -1,7 +1,3 @@
-// function show_modal() {
-//     theModal = document.getElementById('modal');
-//     theModal.classList.add("show");
-// }
 
 function show_modal() {
     var x = document.getElementById("modal");

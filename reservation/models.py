@@ -35,7 +35,7 @@ class Reservation(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-date_picked']
+        ordering = ['date_picked']
 
     def __str__(self):
-        return self.title
+        return self.name

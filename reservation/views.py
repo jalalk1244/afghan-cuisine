@@ -24,6 +24,7 @@ class ReservationList(View):
 
 def create_reservation(request):
     submitted = False
+    reservation_form = ReservationForm()
     if request.method == 'POST':
         reservation_form = ReservationForm(request.POST)
         if reservation_form.is_valid():
@@ -32,8 +33,9 @@ def create_reservation(request):
             reservation_form.save()
             return HttpResponseRedirect('/create_reservation?submitted=True')
     else:
-        user_instace = {'name': request.user.username, 'email':request.user.email}
-        reservation_form = ReservationForm(initial=user_instace)
+        if request.user.is_authenticated:
+            user_instace = {'name': request.user.username, 'email':request.user.email}
+            reservation_form = ReservationForm(initial=user_instace)
         if 'submitted' in request.GET:
             submitted = True
 
