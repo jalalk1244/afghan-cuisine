@@ -24,5 +24,6 @@ class DrinkAdmin(admin.ModelAdmin):
 @admin.register(Alergen)
 class Alergen(admin.ModelAdmin):
 
+    list_display = ('name', 'description')
     list_filter = ('name', 'description')
     search_fields = ['name', 'description']
