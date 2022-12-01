@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
-from .models import Reservation
+from .models import Reservation, Table
 from .forms import ReservationForm
 
 
@@ -30,6 +30,7 @@ def create_reservation(request):
         if reservation_form.is_valid():
             reservation_form.instance.client = request.user
             reservation_form.instance.approved = False
+            reservation_form.instance.table = Table.objects.order_by('?').first()
             reservation_form.save()
             return HttpResponseRedirect('/create_reservation?submitted=True')
     else:
