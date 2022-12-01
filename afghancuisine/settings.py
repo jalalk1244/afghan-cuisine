@@ -62,6 +62,10 @@ LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_REQUIRED = True
 
+ACCOUNT_FORMS = {
+    'signup': 'coresite.forms.CustomSignUpForm',
+}
+
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',

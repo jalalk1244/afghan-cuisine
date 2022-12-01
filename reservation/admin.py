@@ -18,3 +18,10 @@ class ReservationAdmin(admin.ModelAdmin):
         'name', 'email', 'phone_num',
         'table', 'date_picked', 'time_picked', 'approved')
     search_fields = ['name', 'email', 'date_picked']
+    actions = ['approve_reservation', 'delete_reservation']
+
+    def approve_reservation(self, request, queryset):
+        queryset.update(approved=True)
+
+    def delete_reservation(self, request, queryset):
+        queryset.delete()

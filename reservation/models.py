@@ -16,6 +16,7 @@ GUEST_CHOICES = (
     ('10', '10'),
 )
 
+
 class Table(models.Model):
     '''Model for the reservation table '''
     Name = models.CharField(max_length=50, unique=True)
