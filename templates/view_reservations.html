@@ -10,22 +10,26 @@
                     {% if reservations_list|length != 0 %}
                         <h1 class="text-brown">Reservations</h1>
                         {% for reservation in reservations_list %}
-                            <div id="collapse_this">
-                                <div class="panel list-group">
-                                    <a href="#Collaps-{{reservation.id}}" data-parent="#collapse_this" data-toggle="collapse" class="list-group-item">
-                                        <p class="h3">Reservation on: {{reservation.date_picked}}&emsp;<i class="fa-solid fa-arrow-down"></i></p>
-                                    </a>
-                                    <div class="collapse collaps-div" id="Collaps-{{reservation.id}}">
-                                    <ul class="list-group-item-text">
-                                        <li>{{reservation.name}} has booked a reservation for {{ reservation.num_of_guest }} guests</li>
-                                        <li>Date and time: {{ reservation.date_picked}} - {{ reservation.time_picked }}</li>
-                                        <li>Approved: {% if reservation.approved %}<i
+                            <div style="overflow-x: auto;">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Approved</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>{{ reservation.date_picked}}</td>
+                                        <td>{{ reservation.time_picked}}</td>
+                                        <td>{% if reservation.approved %}<i
                                             class="text-green fa-regular fa-circle-check"></i>{% else %}<i
-                                            class="text-red fa-solid fa-x"></i>{% endif %}</li>
-                                        <li><a class="btn btn-signup" href="{% url 'edit_reservation' reservation.id %}">Edit</a></li>
-                                    </ul>
-                                    </div>
-                                </div>
+                                            class="text-red fa-solid fa-x"></i>{% endif %}</td>
+                                        <td><a class="btn btn-signup" href="{% url 'edit_reservation' reservation.id %}">Edit</a></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                             </div>
                         {% endfor %}
                     {% else %}
