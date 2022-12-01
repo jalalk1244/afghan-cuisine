@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-{% load static %}
 
 {% block nav-position %}position-relative{% endblock nav-position %}
 
@@ -20,7 +19,7 @@
                     <img class="card-img-top" src=" {{ dish.dish_pic.url }}" alt="image of {{ dish.name }}">
                     {% endif %}
                     <div class="card-body">
-                        <h5 class="card-title">{{dish.name}}</h5>
+                        <h5 class="card-title">{{dish.name}} - {{dish.price}}$</h5>
                         <div class="collapse" id="collapse-{{ dish.id }}">
                             <p class="card-text">{{dish.description}}</p>
                             <hr>
@@ -49,6 +48,22 @@
                             aria-expanded="false" aria-controls="collapseExample">
                             Read more
                         </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-12"><h3 class="text-left">Drinks <i class="fa-regular fa-glass"></i></h3></div>
+            {% for drink in drinks_list %}
+            <div class="col-12 col-md-4 my-3">
+                <div class="card" style="width: 18rem;">
+                    {% if "placeholder" in drink.drink_pic.url %}
+                    <img class="card-img-top" src="../static/media/images/image_coming_soon.png">
+                    {% else %}
+                    <img class="card-img-top" src=" {{ dish.dish_pic.url }}" alt="image of {{ dish.name }}">
+                    {% endif %}
+                    <div class="card-body">
+                      <h5 class="card-title">{{drink.name}} - {{drink.price}}$</h5>
+                      <p class="card-text">{{drink.description}}</p>
                     </div>
                 </div>
             </div>

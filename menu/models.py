@@ -20,7 +20,7 @@ ALLERGY_ICONS = (
 )
 
 
-class Dishes(models.Model):
+class Dish(models.Model):
     '''Model for the Dishes in the menu '''
     name = models.CharField(max_length=50, unique=True)
     dish_pic = CloudinaryField('image', default='placeholder')
@@ -31,6 +31,7 @@ class Dishes(models.Model):
     protien_amount = models.CharField(max_length=6)
     carbs_amount = models.CharField(max_length=6)
     fat_amount = models.CharField(max_length=6)
+    price = models.FloatField(default=0)
     available = models.BooleanField(default=False)
 
     class Meta:
@@ -40,7 +41,7 @@ class Dishes(models.Model):
         return self.name
 
 
-class Drinks(models.Model):
+class Drink(models.Model):
     '''Model for the Dishes in the menu '''
     name = models.CharField(max_length=50, unique=True)
     drink_pic = CloudinaryField('image', default='placeholder')
