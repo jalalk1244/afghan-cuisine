@@ -37,8 +37,6 @@ class Dish(models.Model):
     name = models.CharField(max_length=50, unique=True)
     dish_pic = CloudinaryField('image', default='placeholder')
     description = models.CharField(max_length=300)
-    # allergy_icon = models.CharField(
-    #     max_length=12, choices=ALLERGY_ICONS, default='0')
     alergens = models.ManyToManyField(Alergen)
     calorie_amount = models.CharField(max_length=6)
     protien_amount = models.CharField(max_length=6)
