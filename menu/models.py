@@ -2,21 +2,21 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 ALLERGY_ICONS = (
-    ('0', 'none'),
-    ('1', 'cereal'),
-    ('2', 'gluten'),
-    ('3', 'milk'),
-    ('4', 'eggs'),
-    ('5', 'peanuts'),
-    ('6', 'nuts'),
-    ('7', 'crustaceans'),
-    ('8', 'mustard'),
-    ('9', 'fish'),
-    ('11', 'lupin'),
-    ('12', 'sesame'),
-    ('13', 'celery'),
-    ('14', 'soya'),
-    ('15', 'molluscs'),
+    ('none', 'none'),
+    ('cereal', 'cereal'),
+    ('gluten', 'gluten'),
+    ('milk', 'milk'),
+    ('eggs', 'eggs'),
+    ('peanuts', 'peanuts'),
+    ('nuts', 'nuts'),
+    ('crustaceans', 'crustaceans'),
+    ('mustard', 'mustard'),
+    ('fish', 'fish'),
+    ('lupin', 'lupin'),
+    ('sesame', 'sesame'),
+    ('celery', 'celery'),
+    ('soya', 'soya'),
+    ('molluscs', 'molluscs'),
 )
 
 

@@ -1,3 +1,5 @@
+@import url('../dist/css/style.css');
+
 /* ------------------------------------- Colors */
 .bg-burgunday {
     background-color: #922C40;
@@ -237,6 +239,11 @@
 .modal-content {
   background-color: #922C40;
   color: #F3EAC0;
+}
+
+/* ---------------------------------------------- Menu */
+.card {
+  border: 1px solid #922C40
 }
 
 /* ---------------------------------------------- Footer */
