@@ -1,24 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
-ALLERGY_ICONS = (
-    ('none', 'none'),
-    ('cereal', 'cereal'),
-    ('gluten', 'gluten'),
-    ('milk', 'milk'),
-    ('eggs', 'eggs'),
-    ('peanuts', 'peanuts'),
-    ('nuts', 'nuts'),
-    ('crustaceans', 'crustaceans'),
-    ('mustard', 'mustard'),
-    ('fish', 'fish'),
-    ('lupin', 'lupin'),
-    ('sesame', 'sesame'),
-    ('celery', 'celery'),
-    ('soya', 'soya'),
-    ('molluscs', 'molluscs'),
-)
-
 
 class Alergen(models.Model):
     '''Model for all the allergens choices'''

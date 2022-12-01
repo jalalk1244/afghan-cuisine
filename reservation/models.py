@@ -18,7 +18,7 @@ GUEST_CHOICES = (
 
 class Table(models.Model):
     '''Model for the reservation table '''
-    Name = models.CharField(max_length=20, unique=True)
+    Name = models.CharField(max_length=50, unique=True)
     max_num_guest = models.PositiveIntegerField()
 
 
@@ -28,7 +28,7 @@ class Reservation(models.Model):
     email = models.EmailField(max_length=80,)
     phone_num = models.CharField(max_length=12,)
     client = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reservation_client')
-    table = models.ForeignKey(Table, to_field='Name', on_delete=models.CASCADE, related_name='reservation_table', null=True)
+    table = models.ForeignKey(Table, on_delete=models.CASCADE, related_name='reservation_table')
     num_of_guest = models.CharField(max_length=6, choices=GUEST_CHOICES, default='2')
     date_picked = models.DateField()
     time_picked = models.TimeField()
