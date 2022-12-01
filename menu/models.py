@@ -25,11 +25,27 @@ class Dishes(models.Model):
     name = models.CharField(max_length=50, unique=True)
     dish_pic = CloudinaryField('image', default='placeholder')
     description = models.CharField(max_length=300)
-    allergy_icon = models.CharField(max_length=12, choices=ALLERGY_ICONS, default='0')
+    allergy_icon = models.CharField(
+        max_length=12, choices=ALLERGY_ICONS, default='0')
     calorie_amount = models.CharField(max_length=6)
     protien_amount = models.CharField(max_length=6)
     carbs_amount = models.CharField(max_length=6)
     fat_amount = models.CharField(max_length=6)
+    available = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name
+
+
+class Drinks(models.Model):
+    '''Model for the Dishes in the menu '''
+    name = models.CharField(max_length=50, unique=True)
+    drink_pic = CloudinaryField('image', default='placeholder')
+    description = models.CharField(max_length=300)
+    price = models.FloatField()
     available = models.BooleanField(default=False)
 
     class Meta:
