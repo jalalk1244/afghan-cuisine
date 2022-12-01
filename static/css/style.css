@@ -246,6 +246,20 @@
   border: 1px solid #922C40
 }
 
+.menu-subtitle {
+  border-bottom: 1px solid #922C40;
+}
+
+.btn-menu {
+  background: #922C40;
+  color: #F3EAC0;
+}
+
+.btn-menu:hover {
+  background: transparent;
+  border: 1px solid #922C40;
+}
+
 /* ---------------------------------------------- Footer */
 footer, footer a {
     color: white;
