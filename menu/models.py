@@ -20,13 +20,26 @@ ALLERGY_ICONS = (
 )
 
 
+class Alergen(models.Model):
+    '''Model for all the allergens choices'''
+    name = models.CharField(max_length=20, unique=True)
+    description = models.CharField(max_length=100)
+
+    class Meta:
+        ordering = ['id']
+
+    def __str__(self):
+        return self.name
+
+
 class Dish(models.Model):
     '''Model for the Dishes in the menu '''
     name = models.CharField(max_length=50, unique=True)
     dish_pic = CloudinaryField('image', default='placeholder')
     description = models.CharField(max_length=300)
-    allergy_icon = models.CharField(
-        max_length=12, choices=ALLERGY_ICONS, default='0')
+    # allergy_icon = models.CharField(
+    #     max_length=12, choices=ALLERGY_ICONS, default='0')
+    alergens = models.ManyToManyField(Alergen)
     calorie_amount = models.CharField(max_length=6)
     protien_amount = models.CharField(max_length=6)
     carbs_amount = models.CharField(max_length=6)

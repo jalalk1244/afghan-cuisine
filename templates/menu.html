@@ -43,12 +43,16 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <h6>Allergens</h6>
-                            <div class="d-flex">
-                                <i class="allergen-level-yes"><span class=" eicon eicon-circle-{{dish.allergy_icon}}"></span></i>
+                            {% if dish.alergens.all|length %}
+                            <h6>Allergens:</h6>
+                            <div class="d-flex justify-content-center">
+                                {% for alergen in dish.alergens.all %}
+                                <i class="allergen-level-yes"><span class=" eicon eicon-circle-{{alergen.name}}"></span></i>
+                                {% endfor %}
                             </div>
+                            {% endif %}
                         </div>
-                        <a class="btn btn-signup" data-toggle="collapse" href="#collapse-{{ dish.id }}" role="button"
+                        <a class="btn btn-signup my-3" data-toggle="collapse" href="#collapse-{{ dish.id }}" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
                             Read more
                         </a>
