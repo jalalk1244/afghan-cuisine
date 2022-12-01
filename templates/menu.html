@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block nav-position %}position-relative{% endblock nav-position %}
 
 {% block content %}
@@ -13,7 +15,7 @@
             <div class="col-12 col-md-4 my-3">
                 <div class="card" style="width: 18rem;">
                     {% if "placeholder" in dish.dish_pic.url %}
-                    <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    <img class="card-img-top" src="../static/media/images/image_coming_soon.png">
                     {% else %}
                     <img class="card-img-top" src=" {{ dish.dish_pic.url }}" alt="image of {{ dish.name }}">
                     {% endif %}
