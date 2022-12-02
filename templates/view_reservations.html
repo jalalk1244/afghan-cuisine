@@ -9,7 +9,7 @@
                 {% if user.is_authenticated %}
                     {% if reservations_list|length != 0 %}
                         <h1 class="text-brown">Reservations</h1>
-                        {% for reservation in reservations_list %}
+                        
                             <div style="overflow-x: auto;">
                                 <table class="table">
                                     <thead>
@@ -20,6 +20,7 @@
                                       </tr>
                                     </thead>
                                     <tbody>
+                                      {% for reservation in reservations_list %}
                                       <tr>
                                         <td>{{ reservation.date_picked}}</td>
                                         <td>{{ reservation.time_picked}}</td>
@@ -28,12 +29,12 @@
                                             class="text-red fa-solid fa-x"></i>{% endif %}</td>
                                         <td><a class="btn btn-signup" href="{% url 'edit_reservation' reservation.id %}">Edit</a></td>
                                       </tr>
+                                      {% endfor %}
                                     </tbody>
                                   </table>
                             </div>
-                        {% endfor %}
                     {% else %}
-                        <h1 class="text-brown">You have no reservations</h1>
+                        <h1 class="text-brown">You have no reservation</h1>
                         <p>Book a reservation <a href="{% url 'create_reservation' %}">here</a></p>
                     {% endif %}
                 {% else %}
