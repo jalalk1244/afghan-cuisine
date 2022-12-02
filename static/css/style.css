@@ -21,6 +21,10 @@
     color: #603B3B;
 }
 
+.text-black {
+  color: black;
+}
+
 /* ----------------------------------------- Header */
 .navbar-nav .nav-link:hover {
     color: white;

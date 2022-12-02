@@ -15,7 +15,7 @@
             <div class="col-12 col-md-4 my-3">
                 <div class="card" style="width: 18rem;">
                     {% if "placeholder" in dish.dish_pic.url %}
-                    <img class="card-img-top" src="{% static 'media/images/image_coming_soon.png' %}">
+                    <img class="card-img-top" src="{% static 'media/images/image_coming_soon.png' %}" alt="image coming soon">
                     {% else %}
                     <img class="card-img-top" src=" {{ dish.dish_pic.url }}" alt="image of {{ dish.name }}">
                     {% endif %}
@@ -66,7 +66,7 @@
             <div class="col-12 col-md-4 my-3">
                 <div class="card" style="width: 18rem;">
                     {% if "placeholder" in drink.drink_pic.url %}
-                    <img class="card-img-top" src="{% static 'media/images/image_coming_soon.png' %}">
+                    <img class="card-img-top" src="{% static 'media/images/image_coming_soon.png' %}" alt="image coming soon">
                     {% else %}
                     <img class="card-img-top" src=" {{ dish.dish_pic.url }}" alt="image of {{ dish.name }}">
                     {% endif %}
@@ -80,7 +80,7 @@
         </div>
         <div class="row py-3">
             <div class="col-12">
-                <p>Read more about the allergens icons <a href="https://erudus.com/" target="_blank" rel="noopener noreferrer">Here</a></p>
+                <p>Read more about the allergens icons <a href="https://erudus.com/" target="_blank" aria-label="link to erudus website that will open in another tab" class="text-brown"><u>in Here</u></a></p>
             <a href="{% url 'create_reservation' %}" class="btn btn-menu">Book a table</a>
             </div>
         </div>
