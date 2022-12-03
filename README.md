@@ -165,12 +165,359 @@ During the development of this project serveral technologies have been used:
 
 - HTML
     * Validated using [W3C](https://validator.w3.org/) HTML validator and no errors were found.
+    ![image of HTML validation](./static/media/images/html-validation.png)
 
 - CSS
-    * Validated using [Jigsaw](https://jigsaw.w3.org/css-validator/) validator and no error were found.
-    ![image of lighthouse report](./static/media/images/css-validation.png)
+    * Validated using [Jigsaw](https://jigsaw.w3.org/css-validator/) validator and no errors were found.
+    ![image of css validation](./static/media/images/css-validation.png)
+
+- JavaScript
+    * Validated using [JsHint](https://jshint.com/) validator and no errors were found.
+
+- Python
+    * Validated using [CI Python Linter](https://pep8ci.herokuapp.com/) validator and no errors were found except in the settings.py file.
 
 - I have also checked and tested the site on different browsers such as Chrome, Firefox, Edge and Safari. By using the chrome dev tools and [Am I Responsive?](https://ui.dev/amiresponsive?url=https://8000-jalalk1244-educationfor-fd3e2i2syhp.ws-eu62.gitpod.io/index.html) website have i also checked and confirmed the responsiveness of the site.
 
 - Lighthouse report (Chrome dev-tool) <br>
     ![image of lighthouse report](.//static/media/images/lighthous-report.png)
+
+## Manual Tests
+
+**Authentication**
+
+Description:
+
+Ensure a user can sign up to the website
+
+Steps:
+
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and click on the account icon
+2. Click on the sign up link
+3. Enter email, username, first name, last name and password 
+3. Click Sign up
+
+Expected:
+
+The user is redirected to the home page as a logged in user
+
+Actual: 
+
+The user is redirected to the home page as a logged in user
+
+<hr>
+
+Description:
+
+Ensure a user can log in once signed up
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and click on the account icon
+2. Click on the log in
+2. Enter login detailscreated in previous test case
+3. Click login
+
+Expected:
+
+User is successfully logged in and redirected to the home page
+
+Actual:
+
+User is successfully logged in and redirected to the home page
+
+<hr>
+
+Description:
+
+Ensure a user can sign out
+
+Steps:
+
+1. Login to the website
+3. click the account icon
+2. Click the logout link
+3. Click confirm on the confirm logout page
+
+Expected:
+
+User is logged out
+
+Actual:
+
+User is logged out
+
+<hr>
+
+**Website's foundations**
+Description:
+
+Ensure that the home page with navbar and footer displays on loading the page
+
+Steps:
+
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/)
+
+Expected:
+
+A landing page with welcoming message with footer and navbar
+
+Actual:
+
+A landing page with welcoming message with footer and navbar
+
+<hr>
+
+Description:
+
+Ensure that the links in the navbar are linking to the right page
+
+Steps:
+
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/)
+2. Click on any of the navbar links
+
+Expected:
+
+if clicked on Home or the Logo, redirected to the index.html<br>
+if clicked on About Us, redirected to the index.html#about-section<br>
+if clicked on Contact , redirected to the index.html#contact-section<br>
+if clicked on Menu, redirected to the menu.html<br>
+if clicked on Reservations, redirected to the create_reservation.html<br>
+if clicked on account icon then login, redirected to the Allauth sign in page<br>
+if clicked on account icon then signup, redirected to the Allauth signup page
+
+Actual:
+
+if clicked on Home or the Logo, redirected to the index.html<br>
+if clicked on About Us, redirected to the index.html#about-section<br>
+if clicked on Contact , redirected to the index.html#contact-section<br>
+if clicked on Menu, redirected to the menu.html<br>
+if clicked on Reservations, redirected to the create_reservation.html<br>
+if clicked on account icon then login, redirected to the Allauth sign in page<br>
+if clicked on account icon then signup, redirected to the Allauth signup page
+
+<hr>
+
+Description:
+
+Ensure that the contact form is working
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/)
+2. Click Contact from the navbar
+3. Fill in the contact from details
+4. Click on Submit
+
+Expected:
+
+A success message with the submited name on it and an email sent to quizleage26@gmail.com with submited message
+
+Actual:
+
+A success message with the submited name on it and an email sent to quizleage26@gmail.com with submited message
+
+**Reservation functionality**
+
+Description:
+
+Ensure that the reservation form can be sent
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and login or register an account
+2. Click on the reservation button on the navbar
+3. Fill in the form the details 
+4. Click on submit
+
+Expected: 
+
+A success message stating that the reservation was sent and is awaiting approval
+
+Actual : 
+
+A success message stating that the reservation was sent and is awaiting approval
+
+<hr>
+
+Description:
+
+Ensure that reservations can be viewed
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and login or register an account
+2. Click on the account icon
+3. Click on My Reservations
+
+Exepected: 
+
+if there are booked reservations, a list of all of the booked reservation and their details
+if ther are no booked reservations, a message stating that there are no booked reservation and promting to book one
+
+Actual:
+
+if there are booked reservations, a list of all of the booked reservation and their details
+if ther are no booked reservations, a message stating that there are no booked reservation and promting to book one
+
+<hr>
+
+Description:
+
+Ensure that reservations can be edited
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and login or register an account
+2. Click on the account icon
+3. Click on My Reservations
+4. click on the edit button on one of the reservations
+5. Change the form details
+
+Expected: 
+
+Reservation updated with the changed details
+
+Actual:
+
+Reservation updated with the changed details
+
+<hr>
+
+Description:
+
+Ensure that reservations can be deleted
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and login or register an account
+2. Click on the account icon
+3. Click on My Reservations
+4. click on the edit button on one of the reservations
+5. Click the delete button
+6. Confirm deletion
+
+Expected:
+
+The reservation deleted from the database
+
+Actual: 
+
+The reservation deleted from the database
+
+<hr>
+
+Description:
+
+Ensure that booking reservations form are prepopulated
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and login or register an account
+2. Click on the reservation button on the navbar
+
+Expected:
+
+The reservation form prepopulated with the users email and name
+
+Actual: 
+
+The reservation form prepopulated with the users email and name
+
+<hr>
+
+**Menu**
+
+Description:
+
+Ensure that all of the available menu items can be viewed
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/)
+2. Click Menu from the navbar
+
+Expected: 
+
+A list of menu items as cards with thier name and picture
+
+Actual:
+
+A list of menu items as cards with thier name and picture
+
+<hr>
+
+Description:
+
+Ensure that the menu items has desciption section
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/)
+2. Click Menu from the navbar
+3. Click on the read more button on any of the dishes
+
+Expected: 
+
+Desciption, nutrition information and allergen information about the dish is revealed
+
+Actual:
+
+Desciption, nutrition information and allergen information about the dish is revealed
+
+<hr>
+
+**Admin site control**
+
+Description:
+
+Ensure that an admin user can login and find access the site's backend
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/)
+2. login as and admin user
+3. Click the account icon on the navbar
+4. Click admin page
+
+Expected:
+
+The admin user is redirected to the admin page
+
+Actual:
+
+The admin user is redirected to the admin page
+
+<hr>
+
+Description:
+
+Ensure that an admin user can approve or disapprove reservatoins
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and login as and admin user
+2. Click on Reservations table
+3. Select a reservation and chose 'delete selected reservations' from the actions
+
+Expected:
+
+The selected reservation deleted from the database
+
+Actual:
+
+The selected reservation deleted from the database
+
+<hr>
+
+Description:
+
+Ensure that the an admin user can performe CRUD functionality on the menu items
+
+Steps:
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and login as and admin user
+2. Click on Dishs table
+
+Expected:
+
+If a dish is selected and the action 'delete selected dish' is chosen, the dish deleted from the database<br>
+If clicked 'add dish' and filled the details, the dish added to the database<br>
+If clicked on any dish and changed the details, the dish's details upated on the database
+
+Actual:
+
+If a dish is selected and the action 'delete selected dish' is chosen, the dish deleted from the database<br>
+If clicked 'add dish' and filled the details, the dish added to the database<br>
+If clicked on any dish and changed the details, the dish's details upated on the database
+
+**The same tests were done for the drinks table and the allergens table and they passed**

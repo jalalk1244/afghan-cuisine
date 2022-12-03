@@ -1,6 +1,6 @@
 {% if messages %}
   {% for message in messages %}
-  <div class="container">
+  <div class="container" id="msg">
     <div class="alert alert-dismissible alert-success">
         <button type="button" class="close" data-dismiss="alert">
         ×
@@ -10,3 +10,11 @@
   </div>
  {% endfor %}
 {% endif %}
+
+<script>
+  setTimeout(function() {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close()
+        }, 3000)
+</script>
