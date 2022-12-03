@@ -3,8 +3,13 @@ It is often said that while others eat to live, Afghans live to eat.Since Novemb
 
 ![image of the site](./static/media/images/am-i-responsive.png)
 # Table of contents
-* [Description](#description)
 * [Design](#design)
+    - [Wireframes](#design)
+    - [Database schema](#database-schema)
+    - [Color scheme](#color-scheme)
+* [UX](#ux)
+    - [Site-Goals](#ite-Goals)
+    - [UX](#ux)
 * [Setup](#setup)
 
 
@@ -161,6 +166,20 @@ During the development of this project serveral technologies have been used:
 
 
 # Testing
+## Bugs
+The following bugs were discovered during the testing of the site:
+* **Bug:** After adding extra model fields to the Reservation model the form in the template was not responsive anymore.
+* **Fix:** Change the form.as_p to form.as_table and put the form inside a table and bring the submit button outside the table.<hr>
+
+* **Bug:** I wanted the allergens field to be a checkbox list that the admin could choose multiple values from but models.choices only allowed it to be one value.
+* **Fix:** I created a separate model for allergens and in the allergens field for the dishes I created a ManyToMany field. After that I added filter_horizontal for the allergens field in the admin panel.<hr>
+
+* **Bug:** The URL in the CSS background-image property for the landing page div with the class 'hero', did not function after deploying the site to Heroku and setting DEBUG to False in the settings.py file.
+* **Fix:** I copied the image url from Cloudinary and replaced it with the URL in the css background-image property for the landing page div with the class 'hero'.
+
+## Unsolved bugs
+* **Social account login**: When developing 
+
 ## Validator Testing
 
 - HTML
@@ -204,6 +223,28 @@ The user is redirected to the home page as a logged in user
 Actual: 
 
 The user is redirected to the home page as a logged in user
+
+<hr>
+
+Description:
+
+Ensure a user can login in to the website with thier social accounts
+
+Steps:
+
+1. Navigate to [Afghan Cuisine](https://afghan-cuisine.herokuapp.com/) and click on the account icon
+2. Click on the login link
+3. Click on the Google button
+3. Confirm sign in with social account
+4. Enter your social account details
+
+Expected:
+
+The user is logged in with thier social account details
+
+Actual: 
+
+The user is logged in with thier social account details
 
 <hr>
 
@@ -521,3 +562,50 @@ If clicked 'add dish' and filled the details, the dish added to the database<br>
 If clicked on any dish and changed the details, the dish's details upated on the database
 
 **The same tests were done for the drinks table and the allergens table and they passed**
+
+# Deployment
+
+## Heroku
+To deploy my project to Heroku I applied these steps:
+- Go to [Heroku.com](https://heroku.com/) and log in or create an account if you don't already have one
+- Click the New dropdown and select Create New App.
+- Enter a valid name for the project
+- Select region and click create app
+- Go to settings tab and click reveal config vars
+- Add the below config vars:
+    * CLOUDINARY_URL = your Cloudinary URL
+    * DATABASE_URL = your database URL
+    * EMAIL_HOST_USER = the email for receiving submitted contact forms
+    * EMAIL_HOST_PASSWORD = email app password
+    * SECRET_KEY = your django secret key
+    * PORT = 8000
+- Navigate to the deploy page
+- Connect github account and search for the repository
+- Click deploy <br>
+The app should now be deployed
+
+## Clone the repository
+To clone the repository:
+- Navigate to https://github.com/jalalk1244/afghan-cuisine 
+- click on the code button at the top of the file
+- Choose HTTPS and copy the link
+- Navigate to your editors terminal, where git must be installed
+- Type git clone URL
+- Replace URL with the copied link
+- Press enter
+
+# Credits
+
+## Content
+- [Allergy icons](https://github.com/Erudus/erudus-icons)
+- [Customize allauth forms](https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/)
+- [Allauth Socialaccount](https://testdriven.io/blog/django-social-auth/)
+- [Landing page image](https://foodandnutrition.org/wp-content/uploads/MGT-Afghanistan.jpg)
+- [Contact section image](https://www.breadsaltcuisine.com/assets/frontend/images/welcome.jpg)
+- [Foodora image](https://upload.wikimedia.org/wikipedia/commons/2/23/Foodora_logo.png)
+- [Uber eats image](https://logodownload.org/wp-content/uploads/2019/05/uber-eats-logo.png)
+- [Test drink image](https://emuweavinglife.files.wordpress.com/2012/11/dogh-6.jpg?w=584)
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [Sending email with django](https://www.youtube.com/watch?v=xNqnHmXIuzU&t=438s)
+
