@@ -14,9 +14,16 @@ It is often said that while others eat to live, Afghans live to eat.Since Novemb
     - [Epics](#epics)
     - [User Stories](#user-stories)
     - [Scope](#scope)
+* [Features](#features)
 * [Testing](#testing)
     - [Bugs](#bugs)
-* [Setup](#setup)
+    - [Unsolved bugs](#unsolved-bugs)
+    - [Validator Testing](#validator-testing)
+    - [Manual Tests](#manual-tests)
+* [Deployment](#deployment)
+    - [Heroku](#heroku)
+    - [Clone the repository](#clone-the-repository)
+* [Credits](#credits)
 
 
 # Design
@@ -105,37 +112,43 @@ Agile Methodology was used to create the website. Github was used for agile proj
 - Navigation bar
     * This section includes the logo of the site and a responsive navigation bar with a hamburger menu for smaller screens. This header is present in all of the site’s pages.
     * The nav bar allows users to easily navigate from one section to another and it is responsive for mobile screens with the navigation links turning into a hamburger menu.
-    * For logged in users a link to their ‘My Reservations’ page is added and for a logged in admin user a link to the admin page is added.
+    * For logged in users a link to their ‘My Reservations’ page is added and for a logged in admin user a link to the admin page is added.<br>
 ![image of the navigation bar](./static/media/images/nav-bar.png)
 - Landing page
     * The landing page includes a welcoming message and the restaurant's slogan. It also consists of a background image of a served table in the restaurant.
-    * The landing page introduces the users to Afghan Cuisine and welcomes them to the restaurant site while the slogan on this section encourages users to learn more about the restaurant and view the menu.
+    * The landing page introduces the users to Afghan Cuisine and welcomes them to the restaurant site while the slogan on this section encourages users to learn more about the restaurant and view the menu.<br>
 ![image of the landing page](./static/media/images/landing-page.png)
 - About section
     * This section contains information on the restaurant, its opening hours, and contact information such as an email address and phone number.
-    * This section informs people about the type of restaurant Afghan Cuisine is and the varieties of food they provide. It also tells the user what time the restaurant is open for business.
+    * This section informs people about the type of restaurant Afghan Cuisine is and the varieties of food they provide. It also tells the user what time the restaurant is open for business.<br>
 ![image of the about section](./static/media/images/about-page.png)
 - Contact section
     * The contact area includes a functional form where the user can enter their full name, email address, and a message to send to us. It also includes a photograph of a restaurant entrée.
-    * Users can offer us feedback or ask questions about the restaurant via the contact section of the website. The photo in this part gives users a taste of what the restaurant has to offer, encouraging them to make a reservation.
+    * Users can offer us feedback or ask questions about the restaurant via the contact section of the website. The photo in this part gives users a taste of what the restaurant has to offer, encouraging them to make a reservation.<br>
 ![image of the contact section](./static/media/images/contact-section.png)
 - Footer 
-    * The footer consists of links to the restaurant's social media accounts so that the user can access.
+    * The footer consists of links to the restaurant's social media accounts so that the user can access.<br>
 ![image of the footer](./static/media/images/footer.png)
 - Booking reservation page
     * This section contains a form that the logged-in user can use to book a reservation. If the user is not logged in, they are advised to log in or create an account before making a reservation.
-    * This area is an important part of the website because it is from here that the user may make a reservation to visit the restaurant. For the convenience of the users, the form is also prepopulated. The reservation booking form has form validation features to ensure that the user enters valid values.
+    * This area is an important part of the website because it is from here that the user may make a reservation to visit the restaurant. For the convenience of the users, the form is also prepopulated. The reservation booking form has form validation features to ensure that the user enters valid values.<br>
 ![image of the booking reservation page](./static/media/images/book-reservation.png)
 - Viewing the reservation
     * This page displays all reservations and associated data in a table for logged-in users.
-    * Users can view their reservations as well as their associated details. They can also amend or delete any of their reservations, providing them the opportunity to remedy any errors in the reservation details. In this section, defensive programming is used, so that when a user attempts to delete a specific reservation, a confirmation modal appears for them to affirm their decision.
+    * Users can view their reservations as well as their associated details. They can also amend or delete any of their reservations, providing them the opportunity to remedy any errors in the reservation details. In this section, defensive programming is used, so that when a user attempts to delete a specific reservation, a confirmation modal appears for them to affirm their decision.<br>
 ![image of the my reservations page](./static/media/images/my-reservations.png)
 - Menu
     * This page displays all of the restaurant's menu items. There are separate sections for the dishes and drinks. The menu items are all presented as cards. The cards include the item's name and price, a picture of the menu item, a description of the item, and nutrition information.
-    * This section allows consumers to see all of the food and drinks that the restaurant offers so that they know what they can order in the restaurant. It also displays nutrition information such as calorie, protein, and fat content, as well as allergen icons, allowing the user to avoid undesirable menu items.
+    * This section allows consumers to see all of the food and drinks that the restaurant offers so that they know what they can order in the restaurant. It also displays nutrition information such as calorie, protein, and fat content, as well as allergen icons, allowing the user to avoid undesirable menu items.<br>
 ![image of the dishes section](./static/media/images/menu-dishes.png)
 ![image of the drinks section](./static/media/images/menu-drinks.png)
 ![image of the dish card](./static/media/images/dish-card.png)
+
+## Future Features
+Some Future features that can be implemented are:
+- The ability for users to edit their account details
+- Avoiding double booking
+- Table map for the tables in the restaurant
 
 ## Technologies Used
 
