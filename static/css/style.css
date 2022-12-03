@@ -281,4 +281,9 @@ footer i {
   .sing-in {
     height: 100vh !important;
   }
+
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/dof48nesk/image/upload/v1670028230/static/media/images/mobile-hero-image-afghancusinie.82e960e95935.jpg') no-repeat fixed bottom / cover;
+
+  }
 }
