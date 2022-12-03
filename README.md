@@ -8,8 +8,14 @@ It is often said that while others eat to live, Afghans live to eat.Since Novemb
     - [Database schema](#database-schema)
     - [Color scheme](#color-scheme)
 * [UX](#ux)
-    - [Site-Goals](#ite-Goals)
-    - [UX](#ux)
+    - [Site-Goals](#site-goals)
+    - [The site's ideal user](#the-site's-ideal-user)
+* [Agile Development](#agile-development)
+    - [Epics](#epics)
+    - [User Stories](#user-stories)
+    - [Scope](#scope)
+* [Testing](#testing)
+    - [Bugs](#bugs)
 * [Setup](#setup)
 
 
@@ -178,7 +184,7 @@ The following bugs were discovered during the testing of the site:
 * **Fix:** I copied the image url from Cloudinary and replaced it with the URL in the css background-image property for the landing page div with the class 'hero'.
 
 ## Unsolved bugs
-* **Social account login**: When developing 
+* **Social account login**: I created the Gmail app to generate OAuth 2 credentials for the django-allauth social account login in a specific Gmail account. When attempting to log in with Google on the deployed Heroku site while signed in to Chrome with that specific Gmail account, I receive a 'Deceptive site ahead' error. When trying the same operation in an incognito tab or in the local host, I don't get the error. While at first I thought that the error was not specific to my Gmail account I tried to recreate the app in google Developers but then when I asked friends to try to log in with their google accounts, no such error was displaying for them. I have tried to log in with google with several different accounts but I only get the error with the account that the OAuth 2 credentials were generated.
 
 ## Validator Testing
 
