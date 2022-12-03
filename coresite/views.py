@@ -21,9 +21,12 @@ def index(request):
             # Send the details in an email
             send_mail(subject, message, from_email, recipient_list)
             # Success message
-            success_message = f"Thank you {name}. We'll get back to you ass soon as possible!"
+            success_message = f"Thank you {name}.\
+                                We'll get back to you ass soon as possible!"
             messages.success(request, success_message)
-            return render(request, 'index.html', {'name': name, 'contact_form': ContactForm()})
+            return render(
+                request, 'index.html', {'name': name,
+                                        'contact_form': ContactForm()})
         else:
             messages.error(request, 'Invalid form submission.')
     else:
