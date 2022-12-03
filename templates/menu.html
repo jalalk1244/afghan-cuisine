@@ -68,7 +68,7 @@
                     {% if "placeholder" in drink.drink_pic.url %}
                     <img class="card-img-top" src="{% static 'media/images/image_coming_soon.png' %}" alt="image coming soon">
                     {% else %}
-                    <img class="card-img-top" src=" {{ dish.dish_pic.url }}" alt="image of {{ dish.name }}">
+                    <img class="card-img-top" src=" {{ drink.drink_pic.url }}" alt="image of {{ dish.name }}">
                     {% endif %}
                     <div class="card-body">
                       <h5 class="card-title">{{drink.name}} - {{drink.price}}$</h5>
