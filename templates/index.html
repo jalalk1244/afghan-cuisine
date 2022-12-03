@@ -15,7 +15,7 @@
 <section class="container-fluid" id="about-section">
     <div class="row bg-creamy">
         <div class="col-12 text-center py-5">
-            <h1 class="text-brown">About Us</h1>
+            <p class="h1 text-brown">About Us</p>
             <p class="h2">We bring you the taste of Afghanistan</p>
             <hr class="about-us-hr">
         </div>
@@ -59,7 +59,7 @@
                 <img class="contact-form-image" src="{% static 'media/images/contact-page-image.jpg' %}" alt="afghan food">
             </div>
             <div class="col-12 col-md-6 my-2 contact-form-column">
-                <h1 class="text-center text-brown">Contact Us</h1>
+                <p class="h1 text-center text-brown">Contact Us</p>
                 <form method="post">
                     {{ contact_form | crispy }}
                     {% csrf_token %}
@@ -73,7 +73,7 @@
 <section class="container-fluid bg-creamy">
     <div class="row m-0 adress py-3">
         <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
-            <h1 class="text-center text-brown">Adress</h1>
+            <p class="h1 text-center text-brown">Adress</p>
             <p class="h3">Harpsundsgatan 18, 124 58 Bandhagen</p>
         </div>
         <div class="col-12 col-md-6 map-column">
