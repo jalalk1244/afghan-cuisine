@@ -159,3 +159,18 @@ During the development of this project serveral technologies have been used:
 - [ElephantSQL](https://www.elephantsql.com/)
     - ElephantSQL was used to store the data of the site.
 
+
+# Testing
+## Validator Testing
+
+- HTML
+    * Validated using [W3C](https://validator.w3.org/) HTML validator and no errors were found.
+
+- CSS
+    * Validated using [Jigsaw](https://jigsaw.w3.org/css-validator/) validator and no error were found.
+    ![image of lighthouse report](./static/media/images/css-validation.png)
+
+- I have also checked and tested the site on different browsers such as Chrome, Firefox, Edge and Safari. By using the chrome dev tools and [Am I Responsive?](https://ui.dev/amiresponsive?url=https://8000-jalalk1244-educationfor-fd3e2i2syhp.ws-eu62.gitpod.io/index.html) website have i also checked and confirmed the responsiveness of the site.
+
+- Lighthouse report (Chrome dev-tool) <br>
+    ![image of lighthouse report](.//static/media/images/lighthous-report.png)
